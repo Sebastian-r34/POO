@@ -8,7 +8,6 @@ public class CicleArray {
     private Modul afegirModul;
     private Modul tornaModul;
 
-
     public CicleArray(String nom, int nombreAlumnes){
         this(nom, nombreAlumnes, 10);
     }
@@ -45,7 +44,7 @@ public class CicleArray {
             //Me passen un modul i queden lloc lliures a l'array
             //afegim el modul a la darrera posició ocupada
             moduls[nombreModuls] = modul;
-            modul.setCicle(th3is);
+            modul.setCicle(this);
             nombreModuls++;
             return true;
         } else if (nombreModuls == moduls.length){
