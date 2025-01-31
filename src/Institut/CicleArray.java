@@ -49,8 +49,16 @@ public class CicleArray {
             return true;
         } else if (nombreModuls == moduls.length){
             //Array ha de tenir un més de longitud
-            //Afegir
-
+            Modul[] arrayModulsNou = new Modul[moduls.length + 1];
+            for (int i = 0; i < moduls.length; i++){
+                //copiam elements a array nou
+                arrayModulsNou[i] = moduls[i];
+            }
+            this.moduls = arrayModulsNou;
+            moduls[nombreModuls] = modul;
+            modul.setCicle(this);
+            nombreModuls++;
+            return true;
         }
     }
 
